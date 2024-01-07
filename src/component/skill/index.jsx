@@ -5,7 +5,7 @@ import shape2 from '../../assets/Rectangle 110.png'
 import shape3 from '../../assets/Rectangle 109.png'
 import shape4 from '../../assets/Rectangle 105.png'
 import SkillItem from '../reusable/SkillItem'
-import html from '../../assets/skill/html5.png'
+import html from '../../assets/skill/Html5.png'
 
 export default function Skill() {
   return (
