@@ -1,5 +1,5 @@
 import React from 'react'
-import html from '../../assets/skill/html 5.png'
+import html from '../../assets/skill/html5.png'
 
 export default function SkillItem(props) {
   return (
