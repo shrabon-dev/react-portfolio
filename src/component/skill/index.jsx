@@ -5,6 +5,7 @@ import shape2 from '../../assets/Rectangle 110.png'
 import shape3 from '../../assets/Rectangle 109.png'
 import shape4 from '../../assets/Rectangle 105.png'
 import SkillItem from '../reusable/SkillItem'
+import html from '../../assets/skill/html5.png'
 
 export default function Skill() {
   return (
@@ -36,23 +37,114 @@ export default function Skill() {
             <Title heading='Skill' subText='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore' />
 
             <div className="skills flex justify-around pt-14 md:pt-32 flex-wrap gap-4 md:gap-8">
-             
-                <SkillItem name='html'/>
-                <SkillItem name='css'/>
-                <SkillItem name='Sass'/>
-                <SkillItem name='css'/>
-                <SkillItem name='Bootstrap'/>
-                <SkillItem name='Sass'/>
-                <SkillItem name='Bootstrap'/>
-                <SkillItem name='html'/>
-                <SkillItem name='Sass'/>
-                <SkillItem name='Sass'/>
-                <SkillItem name='Sass'/>
-                <SkillItem name='Sass'/>
-                <SkillItem name='Sass'/>
-                <SkillItem name='Sass'/>
-                <SkillItem name='Sass'/>
-
+                <div className="skill bg-[#21212150] backdrop-blur-sm flex justify-between items-center w-1/3 sm:w-1/4 md:w-1/6  p-2">
+                    <div className="flex pr-1">
+                        <picture>
+                            <img className='w-10 md:w-20 lg:w-full block' src={html} alt="" />
+                        </picture>
+                        <span className='w-[1px] bg-[#323232] block'></span>
+                    </div>
+                    <p className='font-mulish font-bold text-lg md:text-xl lg:text-3xl text-[#323232] pr-4 uppercase'>html</p>
+                </div>
+                <div className="skill bg-[#21212150] backdrop-blur-sm flex justify-between items-center w-1/3 sm:w-1/4 md:w-1/6  p-2">
+                    <div className="flex pr-1">
+                        <picture>
+                            <img className='w-10 md:w-20 lg:w-full block' src={html} alt="" />
+                        </picture>
+                        <span className='w-[1px] bg-[#323232] block'></span>
+                    </div>
+                    <p className='font-mulish font-bold text-lg md:text-xl lg:text-3xl text-[#323232] pr-4 uppercase'>CSS</p>
+                </div>
+                <div className="skill bg-[#21212150] backdrop-blur-sm flex justify-between items-center w-1/3 sm:w-1/4 md:w-1/6  p-2">
+                    <div className="flex pr-1">
+                        <picture>
+                            <img className='w-10 md:w-20 lg:w-full block' src={html} alt="" />
+                        </picture>
+                        <span className='w-[1px] bg-[#323232] block'></span>
+                    </div>
+                    <p className='font-mulish font-bold text-lg md:text-xl lg:text-3xl text-[#323232] pr-4 uppercase'>Bootstrap</p>
+                </div>
+                <div className="skill bg-[#21212150] backdrop-blur-sm flex justify-between items-center w-1/3 sm:w-1/4 md:w-1/6  p-2">
+                    <div className="flex pr-1">
+                        <picture>
+                            <img className='w-10 md:w-20 lg:w-full block' src={html} alt="" />
+                        </picture>
+                        <span className='w-[1px] bg-[#323232] block'></span>
+                    </div>
+                    <p className='font-mulish font-bold text-lg md:text-xl lg:text-3xl text-[#323232] pr-4 uppercase'>Tailwind</p>
+                </div>
+                <div className="skill bg-[#21212150] backdrop-blur-sm flex justify-between items-center w-1/3 sm:w-1/4 md:w-1/6  p-2">
+                    <div className="flex pr-1">
+                        <picture>
+                            <img className='w-10 md:w-20 lg:w-full block' src={html} alt="" />
+                        </picture>
+                        <span className='w-[1px] bg-[#323232] block'></span>
+                    </div>
+                    <p className='font-mulish font-bold text-lg md:text-xl lg:text-3xl text-[#323232] pr-4 uppercase'>React JS</p>
+                </div>
+                <div className="skill bg-[#21212150] backdrop-blur-sm flex justify-between items-center w-1/3 sm:w-1/4 md:w-1/6  p-2">
+                    <div className="flex pr-1">
+                        <picture>
+                            <img className='w-10 md:w-20 lg:w-full block' src={html} alt="" />
+                        </picture>
+                        <span className='w-[1px] bg-[#323232] block'></span>
+                    </div>
+                    <p className='font-mulish font-bold text-lg md:text-xl lg:text-3xl text-[#323232] pr-4 uppercase'>JavaScript</p>
+                </div>
+                <div className="skill bg-[#21212150] backdrop-blur-sm flex justify-between items-center w-1/3 sm:w-1/4 md:w-1/6  p-2">
+                    <div className="flex pr-1">
+                        <picture>
+                            <img className='w-10 md:w-20 lg:w-full block' src={html} alt="" />
+                        </picture>
+                        <span className='w-[1px] bg-[#323232] block'></span>
+                    </div>
+                    <p className='font-mulish font-bold text-lg md:text-xl lg:text-3xl text-[#323232] pr-4 uppercase'>PHP</p>
+                </div>
+                <div className="skill bg-[#21212150] backdrop-blur-sm flex justify-between items-center w-1/3 sm:w-1/4 md:w-1/6  p-2">
+                    <div className="flex pr-1">
+                        <picture>
+                            <img className='w-10 md:w-20 lg:w-full block' src={html} alt="" />
+                        </picture>
+                        <span className='w-[1px] bg-[#323232] block'></span>
+                    </div>
+                    <p className='font-mulish font-bold text-lg md:text-xl lg:text-3xl text-[#323232] pr-4 uppercase'>Laravel</p>
+                </div>
+                <div className="skill bg-[#21212150] backdrop-blur-sm flex justify-between items-center w-1/3 sm:w-1/4 md:w-1/6  p-2">
+                    <div className="flex pr-1">
+                        <picture>
+                            <img className='w-10 md:w-20 lg:w-full block' src={html} alt="" />
+                        </picture>
+                        <span className='w-[1px] bg-[#323232] block'></span>
+                    </div>
+                    <p className='font-mulish font-bold text-lg md:text-xl lg:text-3xl text-[#323232] pr-4 uppercase'>Firebase</p>
+                </div>
+                <div className="skill bg-[#21212150] backdrop-blur-sm flex justify-between items-center w-1/3 sm:w-1/4 md:w-1/6  p-2">
+                    <div className="flex pr-1">
+                        <picture>
+                            <img className='w-10 md:w-20 lg:w-full block' src={html} alt="" />
+                        </picture>
+                        <span className='w-[1px] bg-[#323232] block'></span>
+                    </div>
+                    <p className='font-mulish font-bold text-lg md:text-xl lg:text-3xl text-[#323232] pr-4 uppercase'>MySQL</p>
+                </div>
+                <div className="skill bg-[#21212150] backdrop-blur-sm flex justify-between items-center w-1/3 sm:w-1/4 md:w-1/6  p-2">
+                    <div className="flex pr-1">
+                        <picture>
+                            <img className='w-10 md:w-20 lg:w-full block' src={html} alt="" />
+                        </picture>
+                        <span className='w-[1px] bg-[#323232] block'></span>
+                    </div>
+                    <p className='font-mulish font-bold text-lg md:text-xl lg:text-3xl text-[#323232] pr-4 uppercase'>Sass</p>
+                </div>
+                <div className="skill bg-[#21212150] backdrop-blur-sm flex justify-between items-center w-1/3 sm:w-1/4 md:w-1/6  p-2">
+                    <div className="flex pr-1">
+                        <picture>
+                            <img className='w-10 md:w-20 lg:w-full block' src={html} alt="" />
+                        </picture>
+                        <span className='w-[1px] bg-[#323232] block'></span>
+                    </div>
+                    <p className='font-mulish font-bold text-lg md:text-xl lg:text-3xl text-[#323232] pr-4 uppercase'>JQuery</p>
+                </div>
             </div>
             
         </div>
