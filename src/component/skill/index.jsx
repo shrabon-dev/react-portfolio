@@ -16,7 +16,7 @@ export default function Skill() {
             opacity: 1,
             transition: {
                 duration: 1,
-                staggerChildren:.35,
+                staggerChildren:0,
             },
         },
     };

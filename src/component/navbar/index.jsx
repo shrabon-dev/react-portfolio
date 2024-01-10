@@ -8,7 +8,7 @@ export default function Navbar() {
 
     let [fixedMenu,setFixedMenu] = useState(false);
     let [isOpen,setIsOpen] = useState(false);
-
+    const [activeMenuItem, setActiveMenuItem] = useState('home');
     useEffect(()=>{
             window.addEventListener('scroll', function (){
                 if(this.scrollY > 600 ){
@@ -16,10 +16,31 @@ export default function Navbar() {
                 }else if(this.scrollY <= 500){
                     setFixedMenu(false)
                 }
+                     // Determine the active section based on the scroll position
+      const sections = ['home', 'about', 'services', 'portfolio','feedback','faqs'];
+      const sectionOffsets = sections.map((section) =>
+        document.getElementById(section)?.offsetTop
+      );
+
+      const activeSection = sections.find(
+        (_, index) =>
+          (window.scrollY+250) >= sectionOffsets[index] &&
+          (window.scrollY+250 < sectionOffsets[index + 1] || index === sections.length - 1)
+      );
+
+        console.log(sectionOffsets)
+        console.log(scrollY)
+
+      if (activeSection) {
+        setActiveMenuItem(activeSection);
+      }
+
             })
+
+ 
+    
+
     },[])
-
-
 
   return (
     <>
@@ -35,14 +56,15 @@ export default function Navbar() {
                         </picture>
                     </div>
                     {/* MENUS START */}
-                    {/*  ${isOpen ? 'visible mMenu':'hidden'} */}
-                    <div className={`menuBars ease-linear md:block md:visible ${isOpen ? 'visible mMenu md:static ':'hidden'} bg-dark md:bg-transparent top-24 sm:top-40 right-16 sm:right-1/4 md:right-full border-t-0 w-4/6 sm:w-1/2 shadow-2xl md:shadow-none shadow-black rounded-md p-10 md:p-0 absolute `}>
+                    <div className={`menuBars ease-linear md:block md:visible ${isOpen ? 'visible mMenu md:static ':'hidden'} bg-dark md:bg-transparent top-24 sm:top-40 right-16 sm:right-1/4 md:right-full border-t-0 w-4/6 sm:w-3/6 md:w-5/6 lg:w-5/6 xl:w-5/6 shadow-2xl md:shadow-none shadow-black rounded-md p-10 md:p-0 absolute `}>
                         <ul className=' space-y-10 md:space-y-0  flex flex-col md:flex-row justify-between items-center'>
-                            <li><a className='a' href="#">Home</a></li>
-                            <li><a className='a' href="#">About</a></li>
-                            <li><a className='a' href="#">Services</a></li>
-                            <li><a className='a' href="#">Portfolio</a></li>
-                            <li><a className='a' href="#">Info <GoDownload className='inline-block'/> </a></li>
+                            <li><a className={`${activeMenuItem == 'home' ? 'a !text-lightGreen':'a'}`} href="#home">Home</a></li>
+                            <li><a className={`${activeMenuItem == 'about' ? 'a !text-lightGreen':'a'}`} href="#about">About</a></li>
+                            <li><a className={`${activeMenuItem == 'services' ? 'a !text-lightGreen':'a'}`} href="#services">Services</a></li>
+                            <li><a className={`${activeMenuItem == 'portfolio' ? 'a !text-lightGreen':'a'}`} href="#portfolio">Portfolio</a></li>
+                            <li><a className={`${activeMenuItem == 'feedback' ? 'a !text-lightGreen':'a'}`} href="#feedback">Feedback</a></li>
+                            <li><a className={`${activeMenuItem == 'faqs' ? 'a !text-lightGreen':'a'}`} href="#faqs">Faq's</a></li>
+                            <li><a className='a flex justify-center items-center' href="#">Info <GoDownload className='inline-block'/> </a></li>
                         </ul>
                         <span onClick={()=>setIsOpen(!isOpen)} className={`bg-dark w-10 h-10 flex justify-center items-center rounded-full shadow-inner animate-bounce duration-300 hover:text-lightGreen cursor-pointer shadow-black text-white md:hidden text-4xl absolute -top-4 -right-14 ${isOpen ? '':''}`}><IoCloseOutline className="inline-block"/></span>
                     </div>

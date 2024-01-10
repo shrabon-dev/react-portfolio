@@ -85,7 +85,7 @@ export default function Education() {
             <Title heading='Education' subText='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore' />
 
             {/* Education Content Start */}
-            <motion.div initial={'initial'} whileInView={'animate'} variants={container} viewport={{ once:true }} className="education mt-14 p-4 md:p-0 md:mt-32 h-[590px] md:h-[800px] relative after:absolute after:w-full after:h-[114%] md:after:h-full after:bg-gradient-to-b after:from-[#121212] after:via-transparent after:to-[#121212] after:content after:top-0">
+            <motion.div initial={'initial'} whileInView={'animate'} variants={container} viewport={{ once:true }} className="education mt-24 p-4 md:p-0 md:mt-32 h-[590px] md:h-[800px] relative after:absolute after:w-full after:h-[114%] md:after:h-full after:bg-gradient-to-b after:from-[#121212] after:via-transparent after:to-[#121212] after:content after:top-0">
             <Slider {...settings}>
 
                 <div>

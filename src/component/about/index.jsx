@@ -65,7 +65,7 @@ export default function About() {
 
   return (
     <>
-        <section className='bg-dark h-full relative py-20 '>
+        <section className='bg-dark h-full relative py-20 '  id='about'>
             {/* shape for animation start */}
                 <span className='w-20 h-20  rounded-full bg-gradient-to-r from-[#191E1C] to-[#101010] inline-block absolute top-40 left-40 animate-pulse'></span>
                 <span className='w-10 h-10  rounded-full bg-gradient-to-r from-[#191E1C] to-[#0c0c0c] inline-block absolute top-72 right-40 animate-pulse'></span>

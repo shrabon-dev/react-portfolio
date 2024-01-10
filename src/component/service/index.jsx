@@ -36,7 +36,7 @@ export default function Service() {
 
   return (
     <>
-    <section className='bg-[#070707] relative overflow-hidden'>
+    <section className='bg-[#070707] relative overflow-hidden'  id='services'>
           {/* shape for animation start */}
                 <span className='inline-block absolute top-20 right-72 transform translate-x-0 animate-moveLeft '>
                     <picture>

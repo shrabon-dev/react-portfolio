@@ -99,7 +99,7 @@ const btmToTop = {
 
   return (
     <>
-      <section className='bg-[#121212] relative'>
+      <section className='bg-[#121212] relative'  id='portfolio'>
             {/* shape for animation start  */}
             <span className='inline-block absolute top-20 left-20 animate-moveLeft'>
                     <picture>

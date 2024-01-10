@@ -41,7 +41,7 @@ export default function Faqs() {
 
   return (
     <>
-        <section className='bg-dark relative'>
+        <section className='bg-dark relative'  id='faqs'>
             {/* shape for animation start  */}
             <span className='inline-block absolute top-1/2 left-96 animate-rotateMoveTop'>
                     <picture>
