@@ -3,9 +3,36 @@ import Title from '../title'
 import imgOne from '../../assets/service/bdev.png'
 import ServiceItem from '../reusable/ServiceItem'
 import shape1 from '../../assets/Polygon 3.png'
-
+import { motion,inView,cubicBezier, stagger  } from "framer-motion"
 
 export default function Service() {
+    const container = {
+        initial: {
+            opacity: 0,
+        },
+        animate: {
+            opacity: 1,
+            transition: {
+                duration: 1,
+                staggerChildren:.35,
+            },
+        },
+    };
+
+    const children = {
+        initial:{
+            opacity:0,
+            y:'100px',
+        },
+        animate:{
+            opacity:1,
+            y:'0px',
+            transition:{
+                duration:.81,
+                ease:cubicBezier(.8,.8,.8,.8),
+            }
+        }
+    }
 
   return (
     <>
@@ -28,14 +55,14 @@ export default function Service() {
             <Title heading='Services' subText='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore' />
 
             {/* Services Start */}
-            <div className="services flex justify-center md:justify-center items-start pt-10 sm:pt-32 flex-wrap gap-5 lg:gap-10">
-                <ServiceItem service='Website Design' info='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil expedita accusamus rerum laudantium quaerat pariatur numquam fugit, laboriosam ratione ipsum?' />
-                <ServiceItem service='Website Design' info='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil expedita accusamus rerum laudantium quaerat pariatur numquam fugit, laboriosam ratione ipsum?' />
-                <ServiceItem service='Website Design' info='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil expedita accusamus rerum laudantium quaerat pariatur numquam fugit, laboriosam ratione ipsum?' />
-                <ServiceItem service='Website Design' info='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil expedita accusamus rerum laudantium quaerat pariatur numquam fugit, laboriosam ratione ipsum?' />
-                <ServiceItem service='Website Design' info='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil expedita accusamus rerum laudantium quaerat pariatur numquam fugit, laboriosam ratione ipsum?' />
-                <ServiceItem service='Website Design' info='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil expedita accusamus rerum laudantium quaerat pariatur numquam fugit, laboriosam ratione ipsum?' />
-            </div>
+            <motion.div initial={'initial'} whileInView={'animate'} variants={container} viewport={{ once:true }} className="services flex justify-center md:justify-center items-start pt-10 sm:pt-32 flex-wrap gap-5 lg:gap-10">
+                <ServiceItem variant={children} service='Website Design' info='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil expedita accusamus rerum laudantium quaerat pariatur numquam fugit, laboriosam ratione ipsum?' />
+                <ServiceItem variant={children} service='Website Design' info='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil expedita accusamus rerum laudantium quaerat pariatur numquam fugit, laboriosam ratione ipsum?' />
+                <ServiceItem variant={children} service='Website Design' info='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil expedita accusamus rerum laudantium quaerat pariatur numquam fugit, laboriosam ratione ipsum?' />
+                <ServiceItem variant={children} service='Website Design' info='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil expedita accusamus rerum laudantium quaerat pariatur numquam fugit, laboriosam ratione ipsum?' />
+                <ServiceItem variant={children} service='Website Design' info='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil expedita accusamus rerum laudantium quaerat pariatur numquam fugit, laboriosam ratione ipsum?' />
+                <ServiceItem variant={children} service='Website Design' info='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil expedita accusamus rerum laudantium quaerat pariatur numquam fugit, laboriosam ratione ipsum?' />
+            </motion.div>
             {/* Services End */}
         </div>
     </section>

@@ -7,7 +7,7 @@ import { TfiAngleUp  } from "react-icons/tfi";
 import { TfiAngleDown  } from "react-icons/tfi";
 import { FaQuoteRight } from "react-icons/fa";
 import { FaQuoteLeft } from "react-icons/fa";
-
+import { motion,inView,cubicBezier, stagger  } from "framer-motion"
 
 const CustomNextArrow = (props) => {
     const { onClick } = props;
@@ -58,6 +58,36 @@ export default function Feedback() {
         prevArrow: <CustomNextArrow />,
         asNavFor: nav1,
       };
+      const container = {
+        initial:{
+          opacity:0,
+          y:'-100px',
+        },
+        animate:{
+            opacity:1,
+            y:'0px',
+            transition:{
+                duration:1,
+                ease:cubicBezier(.1,.1,.1,.1),
+            }
+        }
+    };
+
+      const container2 = {
+        initial:{
+          opacity:0,
+          y:'100px',
+        },
+        animate:{
+            opacity:1,
+            y:'0px',
+            transition:{
+                duration:1,
+                ease:cubicBezier(.1,.1,.1,.1),
+            }
+        }
+    };
+
   return (
     <>
         <section className='bg-dark '>
@@ -68,7 +98,7 @@ export default function Feedback() {
                 <span className='absolute top-72 md:top-68 lg:top-60 xl:top-68 right-10 md:right-0 text-6xl md:text-9xl text-shadowLight/25 '><FaQuoteRight/></span>
                 <div className="feedbacks pt-24">
                     <div className="flex flex-col lg:flex-row gap-20 justify-center items-center ">
-                        <div className="img w-60 h-60 md:w-72 md:h-72 rounded-md bg-[#49494924] backdrop-blur-sm text-center flex items-center shadow-2xl shadow-black/30">
+                        <motion.div initial={'initial'} whileInView={'animate'} variants={container} viewport={{ once:true }} className="img w-60 h-60 md:w-72 md:h-72 rounded-md bg-[#49494924] backdrop-blur-sm text-center flex items-center shadow-2xl shadow-black/30">
                             <Slider  ref={(slider) => (slider1 = slider)} {...settings}>
                                 <div className='w-52 h-52 md:w-60 md:h-60 m-auto'>
                                 <picture>
@@ -88,8 +118,8 @@ export default function Feedback() {
                           
                            
                             </Slider>
-                        </div>
-                        <div className="info w-[300px] max-w-[450px] md:w-[600px] md:max-w-[650px] lg:w-[800px] md:h-72 rounded-md bg-[#49494924] backdrop-blur-sm p-4 sm:p-10 shadow-2xl shadow-black/30">
+                        </motion.div>
+                        <motion.div initial={'initial'} whileInView={'animate'} variants={container2} viewport={{ once:true }} className="info w-[300px] max-w-[450px] md:w-[600px] md:max-w-[650px] lg:w-[800px] md:h-72 rounded-md bg-[#49494924] backdrop-blur-sm p-4 sm:p-10 shadow-2xl shadow-black/30">
                             <Slider ref={(slider) => (slider2 = slider)} {...settings2}>
                             <div className="textInfo">
                                 <h3 className='font-mulish font-bold text-xl md:text-4xl text-white'>MUHAMMAD SULAIMAN </h3>
@@ -108,7 +138,7 @@ export default function Feedback() {
                             </div>
                          
                             </Slider>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>

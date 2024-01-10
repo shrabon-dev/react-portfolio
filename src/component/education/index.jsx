@@ -2,8 +2,8 @@ import React from 'react'
 import Title from '../title'
 import EducationItem from '../reusable/EducationItem'
 import Slider from "react-slick";
-
 import { HiOutlineArrowNarrowUp,HiOutlineArrowNarrowDown } from "react-icons/hi";
+import { motion,inView,cubicBezier, stagger  } from "framer-motion"
 
 const CustomNextArrow = (props) => {
   const { onClick } = props;
@@ -57,6 +57,20 @@ export default function Education() {
       }
     ]
   };
+  const container = {
+    initial:{
+      opacity:0,
+      y:0,
+  },
+  animate:{
+      opacity:1,
+      y:'-100px',
+      transition:{
+          duration:.8,
+          ease:cubicBezier(.1,.1,.1,.1),
+      }
+  }
+};
 
   return (
     <>
@@ -71,7 +85,7 @@ export default function Education() {
             <Title heading='Education' subText='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore' />
 
             {/* Education Content Start */}
-            <div className="education mt-14 p-4 md:p-0 md:mt-32 h-[590px] md:h-[800px] relative after:absolute after:w-full after:h-[114%] md:after:h-full after:bg-gradient-to-b after:from-[#121212] after:via-transparent after:to-[#121212] after:content after:top-0">
+            <motion.div initial={'initial'} whileInView={'animate'} variants={container} viewport={{ once:true }} className="education mt-14 p-4 md:p-0 md:mt-32 h-[590px] md:h-[800px] relative after:absolute after:w-full after:h-[114%] md:after:h-full after:bg-gradient-to-b after:from-[#121212] after:via-transparent after:to-[#121212] after:content after:top-0">
             <Slider {...settings}>
 
                 <div>
@@ -114,7 +128,7 @@ export default function Education() {
 
               {/* Add other EducationItem components as needed */}
             </Slider>
-            </div>
+            </motion.div>
 
             {/* Education Content End */}
         </div>

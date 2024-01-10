@@ -6,10 +6,37 @@ import shape3 from '../../assets/php.png'
 import shape4 from '../../assets/html.png'
 import shape5 from '../../assets/tailwind.png'
 import shape6 from '../../assets/tailwind.png'
+import { motion,cubicBezier  } from "framer-motion"
 
 export default function Faqs() {
 
     let [exposed,setExposed] = useState(null)
+
+    const container = {
+
+        animate: {
+            opacity: 1,
+            transition: {
+                duration: 1,
+                staggerChildren:.35,
+            },
+        },
+    };
+
+    const children = {
+        initial:{
+            opacity:0,
+            y:'20px',
+        },
+        animate:{
+            opacity:1,
+            y:'0px',
+            transition:{
+                duration:.4,
+                ease:cubicBezier(.8,.8,.8,.8),
+            }
+        }
+    }
 
 
   return (
@@ -45,18 +72,18 @@ export default function Faqs() {
             <div className="container mx-auto py-20 relative z-10">
             <Title heading='Faqs' subText='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore' />
 
-                <div className="faqs p-4 sm:w-4/5 mx-auto pt-10 md:pt-32">
+                <motion.div initial={'initial'} whileInView={'animate'} variants={container} viewport={{ once:true }} className="faqs p-4 sm:w-4/5 mx-auto pt-10 md:pt-32">
                     {faqs.map((element,index) => (
-                    <div onClick={()=>setExposed(index)} className=" cursor-pointer faq p-6 bg-[#21212150] backdrop-blur-sm rounded-md mb-10">
+                    <motion.div variants={children} onClick={()=>setExposed(index)} className=" cursor-pointer faq p-6 bg-[#21212150] backdrop-blur-sm rounded-md mb-10">
                         <h6 className={` ${exposed == index && ' border-b border-[#212121]'}  font-kodchasan font-normal text-xl md:text-3xl text-white pb-2`}><span>{index+1}. </span> {element.ask}</h6>
                         {/* {exposed == index &&
                         } */}
                         <div className={` ${exposed == index ? 'faq-ans exposed':'faq-ans'}`}>
                             <p className={`font-kodchasan duration-300 ease-linear font-normal text-sm md:text-lg text-shadowLight  pt-2`}><span className='text-lightGreen/25'>Ans: </span> {element.ans} </p>
                         </div>
-                    </div>
+                    </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     </>

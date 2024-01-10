@@ -10,6 +10,7 @@ import shape1 from '../../assets/Polygon 5.png'
 import shape2 from '../../assets/Polygon 11.png'
 import shape3 from '../../assets/Polygon 12.png'
 import shape4 from '../../assets/Polygon 13.png'
+import { motion,cubicBezier  } from "framer-motion"
 
 const CustomNextArrow = (props) => {
   const { onClick,currentSlide,slideCount  } = props;
@@ -66,6 +67,36 @@ export default function Portfolio() {
       }
     ]
   };
+  const rightToLeft = {
+    initial:{
+      opacity:0,
+      x:'20px',
+    },
+    animate:{
+        opacity:1,
+        x:'0px',
+        transition:{
+            duration:.8,
+            ease:cubicBezier(.8,.8,.8,.8),
+        }
+    }
+};
+
+const btmToTop = {
+    initial:{
+        opacity:0,
+        y:'120px',
+    },
+    animate:{
+        opacity:1,
+        y:'0px',
+        transition:{
+            duration:.8,
+            ease:cubicBezier(.8,.8,.8,.8),
+        }
+    }
+}
+
   return (
     <>
       <section className='bg-[#121212] relative'>
@@ -95,7 +126,7 @@ export default function Portfolio() {
         <Title heading='Portfolio' subText='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore' />
 
         {/* Header Start */}
-        <div className="header pt-20 md:pt-32">
+        <motion.div initial={'initial'} whileInView={'animate'} variants={rightToLeft} viewport={{ once:true }} className="header pt-20 md:pt-32">
           <div className="flex justify-end items-center">
             <div className="w-full md:w-1/2 pr-10 md:pr-0 text-right">
               <select name="#" id="" className='w-1/2 bg-transparent  !border-lightGreen font-kodchasan text-lg md:text-2xl text-lightGreen border-b-2 focus:border-none p-4'>
@@ -107,9 +138,10 @@ export default function Portfolio() {
               </select>
             </div>
           </div>
-        </div>
+        </motion.div>
         {/* Header End */}
         {/* Portfolios Start */}
+          <motion.div initial={'initial'} whileInView={'animate'} variants={btmToTop} viewport={{ once:true }} className="animate">
           <Slider {...settings}  className="portfolios pt-20">
             <div className="slide">
               <div className="w-full p-10 md:p-0 port flex flex-col md:flex-row gap-4 lg:gap-20 justify-center mb-10 md:items-center ">
@@ -139,22 +171,8 @@ export default function Portfolio() {
                 </div>
               </div>
             </div>
-     
-          
-            {/* <div className="w-full port flex flex-row-reverse mb-10  justify-center items-center gap-20 ">
-              <div className="img">
-                <picture>
-                  <img className='min-w-96 max-w-[600px] block mr-auto' src={imgOne} alt={imgOne} />
-                </picture>
-              </div>
-              <div className="info pl-20 ">
-                <h2 className='font-mulish font-bold text-4xl text-shadowLight'>React JS Website</h2>
-                <h6 className='font-mulish font-bold text-sm bg-lightGreen/75 inline-block p-1 mt-4 text-dark'>Web Design</h6>
-                <a href="#" className='hover:text-lightGreen group duration-300 pt-4 hover:opacity-100 opacity-55 font-kodchasan text-base text-shadowLight flex items-center gap-2'>View <LuExternalLink className='inline-block text-shadowLight group-hover:text-lightGreen duration-300'/></a>
-              </div>
-            </div> */}
-
           </Slider>
+          </motion.div>
         {/* Portfolios End */}
         </div>
       </section>

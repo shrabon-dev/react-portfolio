@@ -5,8 +5,37 @@ import shape2 from '../../assets/Rectangle 110.png'
 import shape3 from '../../assets/Rectangle 109.png'
 import shape4 from '../../assets/Rectangle 105.png'
 import SkillItem from '../reusable/SkillItem'
+import { motion,cubicBezier} from "framer-motion"
 
 export default function Skill() {
+    const container = {
+        initial: {
+            opacity: 0,
+        },
+        animate: {
+            opacity: 1,
+            transition: {
+                duration: 1,
+                staggerChildren:.35,
+            },
+        },
+    };
+
+    const children = {
+        initial:{
+            opacity:0,
+            scale:0,
+        },
+        animate:{
+            opacity:1,
+            scale:1,
+            transition:{
+                duration:.8,
+                ease:cubicBezier(.1,.1,.1,.1),
+            }
+        }
+    }
+
   return (
     <>
     <section className='bg-[#000000] lg:h-svh relative'>
@@ -35,23 +64,23 @@ export default function Skill() {
         <div className="container mx-auto py-10  md:py-32 relative z-10">
             <Title heading='Skill' subText='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore' />
 
-            <div className="skills flex justify-around pt-14 md:pt-32 flex-wrap gap-4 md:gap-8">
-                <SkillItem name='html'/>
-                <SkillItem name='css'/>
-                <SkillItem name='Sass'/>
-                <SkillItem name='css'/>
-                <SkillItem name='Bootstrap'/>
-                <SkillItem name='Sass'/>
-                <SkillItem name='Bootstrap'/>
-                <SkillItem name='html'/>
-                <SkillItem name='Sass'/>
-                <SkillItem name='Sass'/>
-                <SkillItem name='Sass'/>
-                <SkillItem name='Sass'/>
-                <SkillItem name='Sass'/>
-                <SkillItem name='Sass'/>
-                <SkillItem name='Sass'/>
-            </div>
+            <motion.div initial={'initial'} whileInView={'animate'} variants={container} viewport={{ once:true }} className="skills flex justify-around pt-14 md:pt-32 flex-wrap gap-4 md:gap-8">
+                <SkillItem variant={children} name='html'/>
+                <SkillItem variant={children} name='css'/>
+                <SkillItem variant={children} name='Sass'/>
+                <SkillItem variant={children} name='css'/>
+                <SkillItem variant={children} name='Bootstrap'/>
+                <SkillItem variant={children} name='Sass'/>
+                <SkillItem variant={children} name='Bootstrap'/>
+                <SkillItem variant={children} name='html'/>
+                <SkillItem variant={children} name='Sass'/>
+                <SkillItem variant={children} name='Sass'/>
+                <SkillItem variant={children} name='Sass'/>
+                <SkillItem variant={children} name='Sass'/>
+                <SkillItem variant={children} name='Sass'/>
+                <SkillItem variant={children} name='Sass'/>
+                <SkillItem variant={children} name='Sass'/>
+            </motion.div>
             
         </div>
     </section>
