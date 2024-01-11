@@ -23,8 +23,8 @@ export default function TextAnimation2(props) {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.41,
-        staggerChildren: 0.25,
+        duration: 1,
+        staggerChildren: 0.1,
       },
     },
   };
