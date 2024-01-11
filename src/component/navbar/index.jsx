@@ -51,7 +51,7 @@ export default function Navbar() {
                     {/* MENUS START */}
                     <div className={`menuBars ease-linear md:block md:visible ${isOpen ? 'visible mMenu md:static ':'hidden'} bg-dark md:bg-transparent top-24 sm:top-40 right-16 sm:right-1/4 md:right-full border-t-0 w-4/6 sm:w-3/6 md:w-5/6 lg:w-5/6 xl:w-5/6 shadow-2xl md:shadow-none shadow-black rounded-md p-10 md:p-0 absolute `}>
                         <ul className=' space-y-10 md:space-y-0  flex flex-col md:flex-row justify-between items-center'>
-                            <li><a className={`${activeMenuItem == 'home' ? 'a !text-lightGreen':'a'}`} href="#home">Home</a></li>
+                            <li><a className={`${activeMenuItem == 'home' ? 'a !text-lightGreen':'a'}`} href="#home">Home </a></li>
                             <li><a className={`${activeMenuItem == 'about' ? 'a !text-lightGreen':'a'}`} href="#about">About</a></li>
                             <li><a className={`${activeMenuItem == 'services' ? 'a !text-lightGreen':'a'}`} href="#services">Services</a></li>
                             <li><a className={`${activeMenuItem == 'portfolio' ? 'a !text-lightGreen':'a'}`} href="#portfolio">Portfolio</a></li>
