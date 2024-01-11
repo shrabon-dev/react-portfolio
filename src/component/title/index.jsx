@@ -29,7 +29,6 @@ export default function Title(props) {
     }
   }
 
-
   return (
     <>
         <motion.div initial='initial' whileInView={'animate'} viewport={{ once:true }} variants={container} className="title relative after:w-1/5 after:absolute after:bottom-0 after:content after:h-[2px] after:left-1/2 after:-translate-x-1/2 after:bg-gradient-to-r after:via-orangeRed after:from-transparent">

@@ -11,7 +11,7 @@ export default function Show() {
                 <h2 className='font-[950] font-mulish mb-2 md:mb-0 text-[65px] sm:text-[92px] md:text-[120px] lg:text-[160px] xl:text-[200px] 2xl:text-[240px] text-white uppercase leading-[1.2]'>
                 <TextAnimation2 text='We'/> 
                 <TextAnimation2 text='provide '/> 
-                <TextAnimation2 text='best  work'/> 
+                <TextAnimation2 text='best work'/> 
                 </h2>
              
                 <div className="img w-auto  md:w-[200px] lg:w-[280px] lg:max-w-[340px] xl:w-[340px] relative md:absolute right-0 md:h-72 lg:h-[420px] md:top-10 lg:top-20 border p-6 rounded-md">

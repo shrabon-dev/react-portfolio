@@ -13,7 +13,6 @@ export default function Faqs() {
     let [exposed,setExposed] = useState(null)
 
     const container = {
-
         animate: {
             opacity: 1,
             transition: {
@@ -37,7 +36,6 @@ export default function Faqs() {
             }
         }
     }
-
 
   return (
     <>
@@ -89,7 +87,6 @@ export default function Faqs() {
     </>
   )
 }
-
 
 const faqs = [
     {

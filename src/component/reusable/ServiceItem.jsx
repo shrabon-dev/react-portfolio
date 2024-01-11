@@ -1,6 +1,6 @@
 import React from 'react'
 import imgOne from '../../assets/service/bdev.png'
-import { motion,inView,cubicBezier, stagger  } from "framer-motion"
+import { motion  } from "framer-motion"
 
 export default function ServiceItem(props) {
   

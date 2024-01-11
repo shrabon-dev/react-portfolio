@@ -20,7 +20,6 @@ export default function Footer() {
                             <li><a className='a !px-0 md:text-base ' href="#">Info</a></li>
                         </ul>
                         <p className='font-kodchasan font-normal text-xs md:text-sm xl:text-xl text-center pt-5 text-white/50 '>All Rights Reserved 2023 & This site created by <span className='text-lightGreen'>Muhammad Shrabon</span></p>
-
                     </div>
                 </div>
             </div>

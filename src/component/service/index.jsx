@@ -3,7 +3,7 @@ import Title from '../title'
 import imgOne from '../../assets/service/bdev.png'
 import ServiceItem from '../reusable/ServiceItem'
 import shape1 from '../../assets/Polygon 3.png'
-import { motion,inView,cubicBezier, stagger  } from "framer-motion"
+import { motion,cubicBezier } from "framer-motion"
 
 export default function Service() {
     const container = {

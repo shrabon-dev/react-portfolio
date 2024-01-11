@@ -1,6 +1,6 @@
 import React from 'react'
 import html from '../../assets/skill/Html5.png'
-import { motion,inView,cubicBezier, stagger  } from "framer-motion"
+import { motion } from "framer-motion"
 
 export default function SkillItem(props) {
   return (

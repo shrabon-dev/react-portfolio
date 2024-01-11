@@ -47,7 +47,6 @@ export default function TextAnimation2(props) {
     },
   };
 
-
   return (
     <motion.span
       ref={ref}

@@ -5,7 +5,6 @@ import TextAnimation2 from '../TextAnimation2'
 import { motion,AnimatePresence } from 'framer-motion';
 
 export default function Banner() {
-  let [isVisible,setIsVisible] = useState(true)
   return (
     <>
       <section className='bg-dark pt-36 ' id='home'>

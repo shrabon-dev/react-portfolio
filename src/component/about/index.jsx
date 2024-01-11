@@ -62,7 +62,6 @@ export default function About() {
         }
     }
 
-
   return (
     <>
         <section className='bg-dark h-full relative py-20 '  id='about'>

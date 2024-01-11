@@ -17,29 +17,22 @@ export default function Navbar() {
                     setFixedMenu(false)
                 }
                      // Determine the active section based on the scroll position
-      const sections = ['home', 'about', 'services', 'portfolio','feedback','faqs'];
-      const sectionOffsets = sections.map((section) =>
-        document.getElementById(section)?.offsetTop
-      );
+                const sections = ['home', 'about', 'services', 'portfolio','feedback','faqs'];
+                const sectionOffsets = sections.map((section) =>
+                  document.getElementById(section)?.offsetTop
+                );
 
-      const activeSection = sections.find(
-        (_, index) =>
-          (window.scrollY+250) >= sectionOffsets[index] &&
-          (window.scrollY+250 < sectionOffsets[index + 1] || index === sections.length - 1)
-      );
-
-        console.log(sectionOffsets)
-        console.log(scrollY)
-
-      if (activeSection) {
-        setActiveMenuItem(activeSection);
-      }
+                const activeSection = sections.find(
+                  (_, index) =>
+                    (window.scrollY+250) >= sectionOffsets[index] &&
+                    (window.scrollY+250 < sectionOffsets[index + 1] || index === sections.length - 1)
+                );
+                
+                if (activeSection) {
+                  setActiveMenuItem(activeSection);
+                }
 
             })
-
- 
-    
-
     },[])
 
   return (

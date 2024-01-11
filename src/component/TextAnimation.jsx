@@ -2,10 +2,7 @@ import React from 'react'
 import {motion,cubicBezier} from 'framer-motion'
 
 export default function TextAnimation(props) {
-
   const text = props.text.split(' ')
-
-
 
   const container = {
     initial : {
@@ -34,10 +31,6 @@ export default function TextAnimation(props) {
       }
     }
   }
-
-
-
-  
 
   return (
     <>

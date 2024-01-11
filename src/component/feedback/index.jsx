@@ -115,8 +115,6 @@ export default function Feedback() {
                                 <img className='w-52 h-52 md:w-60 md:h-60 m-auto block rounded-full ' src={img} alt={img} />
                                 </picture>
                                 </div>
-                          
-                           
                             </Slider>
                         </motion.div>
                         <motion.div initial={'initial'} whileInView={'animate'} variants={container2} viewport={{ once:true }} className="info w-[300px] max-w-[450px] md:w-[600px] md:max-w-[650px] lg:w-[800px] md:h-72 rounded-md bg-[#49494924] backdrop-blur-sm p-4 sm:p-10 shadow-2xl shadow-black/30">
@@ -136,7 +134,6 @@ export default function Feedback() {
                                 <h6 className='font-mulish md:font-bold text-base md:text-xl text-shadowLight py-1'>Manager of <span className='text-lightGreen'> HN ltd</span></h6>
                                 <p className='font-mulish font-normal text-sm md:text-base text-shadowLight/50 pt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae explicabo saepe quas magnam rem dolorum modi facilis eligendi tenetur officia recusandae blanditiis, impedit, porro dicta pariatur iusto, debitis veritatis expedita!</p>
                             </div>
-                         
                             </Slider>
                         </motion.div>
                     </div>

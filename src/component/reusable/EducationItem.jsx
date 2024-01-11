@@ -7,8 +7,6 @@ export default function EducationItem(props) {
   return (
     <>
     <div className="w-full p-4 md:p-8 border-[1px] border-[#88888831] rounded-md mb-5 backdrop-blur-md">
-    {/* <div className="w-full p-8 border-[1px] border-[#88888831] rounded-md mb-5"> */}
-        {/* Date */}
         <h6 className='text-lightGreen font-kodchasan font-normal text-xs md:text-base ' >2021-2022</h6>
 
         <h2 className='font-mulish font-bold text-xl md:text-3xl text-white py-2'>BBA’S  (ACCOUNTING)</h2>

@@ -124,12 +124,9 @@ export default function Education() {
                   info='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil expedita accusamus rerum laudantium quaerat pariatur numquam fugit, laboriosam ratione ipsum?'
                 />
                 </div>
-           
-
               {/* Add other EducationItem components as needed */}
             </Slider>
             </motion.div>
-
             {/* Education Content End */}
         </div>
     </section>
