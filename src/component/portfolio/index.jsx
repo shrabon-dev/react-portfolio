@@ -141,6 +141,7 @@ const btmToTop = {
         </motion.div>
         {/* Header End */}
         {/* Portfolios Start */}
+        <span className='w-72 h-72 rounded-full absolute bottom-20 shadow-2xl shadow-black left-44 bg-lightGreen block '></span>
           <motion.div initial={'initial'} whileInView={'animate'} variants={btmToTop} viewport={{ once:true }} className="animate">
           <Slider {...settings}  className="portfolios pt-20">
             <div className="slide">
@@ -151,7 +152,7 @@ const btmToTop = {
                   </picture>
                 </div>
                 <div className="info ">
-                  <h2 className='font-mulish font-bold text-2xl md:text-4xl text-shadowLight'>React JS Website</h2>
+                  <h2 className='font-mulish font-bold text-2xl md:text-4xl text-white/90'>React JS Website</h2>
                   <h6 className='font-mulish font-bold text-sm bg-lightGreen/75 inline-block p-1 mt-2 md:mt-4 text-dark'>Web Design</h6>
                   <a href="#" className='hover:text-lightGreen group duration-300 pt-2 md:pt-4 hover:opacity-100 opacity-55 font-kodchasan text-base text-shadowLight flex items-center gap-2'>View <LuExternalLink className='inline-block text-shadowLight group-hover:text-lightGreen duration-300'/></a>
                 </div>
@@ -165,7 +166,7 @@ const btmToTop = {
                   </picture>
                 </div>
                 <div className="info ">
-                  <h2 className='font-mulish font-bold text-2xl md:text-4xl text-shadowLight'>React JS Website</h2>
+                  <h2 className='font-mulish font-bold text-2xl md:text-4xl text-white/90'>React JS Website</h2>
                   <h6 className='font-mulish font-bold text-sm bg-lightGreen/75 inline-block p-1 mt-2 md:mt-4 text-dark'>Web Design</h6>
                   <a href="#" className='hover:text-lightGreen group duration-300 pt-2 md:pt-4 hover:opacity-100 opacity-55 font-kodchasan text-base text-shadowLight flex items-center gap-2'>View <LuExternalLink className='inline-block text-shadowLight group-hover:text-lightGreen duration-300'/></a>
                 </div>

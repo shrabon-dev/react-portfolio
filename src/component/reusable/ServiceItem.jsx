@@ -6,7 +6,7 @@ export default function ServiceItem(props) {
   
   return (
     <>
-    <motion.div variants={props.variant} className="serviceItem w-[300px] max-w-[350px] sm:max-w-[45%] lg:w-[380px] lg:max-w-[400px] bg-dark/55 backdrop-blur-md p-4 md:p-6 rounded-md border-[1px] border-gray-700 mb-10 hover:rotate-0 duration-300 ease-linear grBorder">
+    <motion.div variants={props.variant} className="serviceItem w-[300px] max-w-[350px] sm:max-w-[45%] lg:w-[380px] lg:max-w-[400px] bg-dark/40  backdrop-blur-md p-4 md:p-6 rounded-md border-[1px] border-transparent shadow-black shadow-2xl mb-10 hover:rotate-0 duration-300 ease-linear hover:border-lightGreen/50 hover:bg-dark">
         <div className="flex gap-4 items-center">
             <picture>
                 <img className='block w-16 lg:w-24' src={imgOne} alt={imgOne} />
