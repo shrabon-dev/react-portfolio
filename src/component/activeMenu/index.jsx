@@ -24,7 +24,7 @@ export default function ActiveSection() {
       };
   return (
     <>
-     <div className={`activeSection fixed z-[9999999] top-0 left-0 w-full bg-orangeRed/50 duration-300 ease-linear h-[6px] shadow-inner`}>
+     <div className={`activeSection fixed z-[9999999] top-0 left-0 w-full bg-[#2c2c2c] duration-300 ease-linear h-[6px] shadow-inner`}>
      <div style={progressBarStyle} className='block bg-lightGreen h-full shadow-xl shadow-black duration-300 ease-linear rounded-full'></div>
      </div>
     </>

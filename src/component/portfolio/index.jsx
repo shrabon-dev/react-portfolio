@@ -99,7 +99,7 @@ const btmToTop = {
 
   return (
     <>
-      <section className='bg-[#121212] relative'  id='portfolio'>
+      <section className='bg-[#121212] relative overflow-hidden'  id='portfolio'>
             {/* shape for animation start  */}
             <span className='inline-block absolute top-20 left-20 animate-moveLeft'>
                     <picture>
@@ -141,7 +141,7 @@ const btmToTop = {
         </motion.div>
         {/* Header End */}
         {/* Portfolios Start */}
-        <span className='w-72 h-72 rounded-full absolute bottom-20 shadow-2xl shadow-black left-44 bg-lightGreen block '></span>
+        <span className='w-72 h-72 rounded-full absolute bottom-40 md:bottom-20 shadow-2xl shadow-black left-44 bg-lightGreen block '></span>
           <motion.div initial={'initial'} whileInView={'animate'} variants={btmToTop} viewport={{ once:true }} className="animate">
           <Slider {...settings}  className="portfolios pt-20">
             <div className="slide">

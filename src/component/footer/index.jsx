@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../assets/logo.png'
+import logo from '../../assets/a-logo.svg'
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
                 <div className="flex justify-between gap-5">
                     <div className="w-1/6 md:w-1/3">
                         <picture>
-                            <img src={logo} alt={logo} />
+                            <img className='w-20' src={logo} alt={logo} />
                         </picture>
                     </div>
                     <div className="w-2/3">

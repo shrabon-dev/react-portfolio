@@ -68,7 +68,7 @@ export default function Navbar() {
   return (
     <>
         {/* <nav className=''> */}
-        <nav className={`py-4 w-full z-[999999] ${fixedMenu ? 'shadow-xl shadow-black/25 bg-[#242424] fixed duration-700 ease-linear top-0' : 'absolute bg-transparent duration-700 ease-linear top-0 md:top-14'}`}>
+        <nav className={`py-4 w-full z-[999999] ${fixedMenu ? 'shadow-xl shadow-black/25 bg-[#121212] fixed duration-700 ease-linear top-0' : 'absolute bg-transparent duration-700 ease-linear top-0 md:top-14'}`}>
             <div className="container mx-auto px-4 md:px-0">
                <div className="flex justify-between items-center">
                     {/* LOGO START */}
@@ -84,7 +84,7 @@ export default function Navbar() {
                     </div>
                </div>
                     {/* MENUS START */}
-                    <div className={`menuBars !fixed  z-0 ease-linear md:block md:visible duration-300 ${isOpen ? 'left-0 ':'-left-full '} bg-[#242424] top-0 w-1/2 overflow-auto md:overflow-hidden md:w-1/3 lg:w-1/3 xl:w-1/3 2xl:w-1/5 h-full md:h-screen  shadow-2xl md:shadow-none shadow-black py-0 md:py-10`}>
+                    <div className={`menuBars !fixed  z-0 ease-linear md:block md:visible duration-300 ${isOpen ? 'left-0 ':'-left-full '} bg-[#121212] border-r border-[#1f1e1e] top-0 w-1/2 overflow-auto md:overflow-hidden md:w-1/3 lg:w-1/3 xl:w-1/3 2xl:w-1/5 h-full md:h-screen  shadow-2xl md:shadow-none shadow-black py-0 md:py-10`}>
                            {/* LOGO START */}
                     <div className="logo pt-5 md:pt-10 text-right pl-6 md:pl-14 lg:pl-20">
                         <picture>

@@ -45,55 +45,55 @@ export default function ContactForm() {
         <section className='bg-dark'>
             <div className="container mx-auto py-4 sm:py-20">
                 {/* CONTACT FORM & INFO START */}
-                <div className="flex flex-col md:flex-row justify-between items-center p-4 md:p-0">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-10 p-4 md:p-0">
                     <div className="contactInfo w-full md:w-2/5">
                         {/* Title Start*/}
-                        <h4 className='font-mulish font-bold text-4xl md:text-5xl lg:text-7xl text-white leading-[1.5] lg:leading-normal border-b-2  border-black overflow-hidden inline'> <TextAnimation  text={'For More Details Contact Me!'} /> </h4>
-                        <motion.p initial={{ y:-100,opacity:0 }} viewport={{ once:true }} whileInView={{ y:0,opacity:1 }} transition={{ duration:.8,ease:cubicBezier(.1,.1,.1,.1), }}  className='font-mulish font-bold text-lg lg:text-xl pt-4 lg:pt-0 text-shadowLight leading-normal '> Don’t be afraid man! Just say hello </motion.p>
+                        <h4 className='font-mulish font-bold text-4xl md:text-5xl lg:text-5xl xl:text-7xl text-white leading-[1.7] lg:leading-[1.7] xl:leading-[1.2] xl:pb-0 border-b-2  border-black overflow-hidden inline'> <TextAnimation  text={'For More Details Contact Me!'} /> </h4>
+                        <motion.p initial={{ y:-100,opacity:0 }} viewport={{ once:true }} whileInView={{ y:0,opacity:1 }} transition={{ duration:.8,ease:cubicBezier(.1,.1,.1,.1), }}  className='font-mulish font-bold text-lg lg:text-xl pt-4 lg:pt-2 text-shadowLight leading-normal '> Don’t be afraid man! Just say hello </motion.p>
                         {/* Title End*/}
 
                         <motion.ul initial={'initial'} whileInView={'animate'} variants={container} viewport={{ once:true }}  className='mt-10'>
                             <motion.li variants={children} className='flex  items-center mb-10 gap-5'>
-                                <span className='bg-[#21212150] w-10 h-10 md:w-20 md:h-20 flex justify-center items-center text-lightGreen text-2xl md:text-5xl'><FiPhone /></span>
+                                <span className='bg-[#21212150] w-10 h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 flex justify-center items-center text-lightGreen text-2xl lg:text-5xl'><FiPhone /></span>
                                 <div>
-                                    <h6 className='bg-clip-text text-transparent bg-gradient-to-r from-[0%] to-[50%] from-lightGreen  to-orangeRed font-mulish font-bold text-base md:text-2xl uppercase'>Phone</h6>
-                                    <p className='font-mulish font-normal text-sm md:text-lg text-shadowLight'>+880 1744190465</p>
+                                    <h6 className='bg-clip-text text-transparent bg-gradient-to-r from-[0%] to-[50%] from-lightGreen  to-orangeRed font-mulish font-bold text-base lg:text-2xl uppercase'>Phone</h6>
+                                    <p className='font-mulish font-normal text-sm lg:text-lg text-shadowLight'>+880 1744190465</p>
                                 </div>
                             </motion.li>
                             <motion.li variants={children} className='flex items-center mb-10 gap-5'>
-                                <span className='bg-[#21212150] w-10 h-10 md:w-20 md:h-20 flex justify-center items-center text-lightGreen text-2xl md:text-5xl'><MdEmail /></span>
+                                <span className='bg-[#21212150] w-10 h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 flex justify-center items-center text-lightGreen text-2xl lg:text-5xl'><MdEmail /></span>
                                 <div>
-                                    <h6 className='bg-clip-text text-transparent bg-gradient-to-r from-[0%] to-[50%] from-lightGreen  to-orangeRed font-mulish font-bold text-base md:text-2xl uppercase'>Email</h6>
-                                    <p className='font-mulish font-normal text-sm md:text-lg text-shadowLight'>example@mail.com</p>
+                                    <h6 className='bg-clip-text text-transparent bg-gradient-to-r from-[0%] to-[50%] from-lightGreen  to-orangeRed font-mulish font-bold text-base lg:text-2xl uppercase'>Email</h6>
+                                    <p className='font-mulish font-normal text-sm lg:text-lg text-shadowLight'>example@mail.com</p>
                                 </div>
                             </motion.li>
                             <motion.li variants={children} className='flex items-center mb-10 gap-5'>
-                                <span className='bg-[#21212150] w-10 h-10 md:w-20 md:h-20 flex justify-center items-center text-lightGreen text-2xl md:text-5xl'><FaLocationDot /></span>
+                                <span className='bg-[#21212150] w-10 h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 flex justify-center items-center text-lightGreen text-2xl lg:text-5xl'><FaLocationDot /></span>
                                 <div>
-                                    <h6 className='bg-clip-text text-transparent bg-gradient-to-r from-[0%] to-[50%] from-lightGreen  to-orangeRed font-mulish font-bold text-base md:text-2xl uppercase'>Address</h6>
-                                    <p className='font-mulish font-normal text-sm md:text-lg text-shadowLight'>Zinzira-Keranigonj, Dhaka</p>
+                                    <h6 className='bg-clip-text text-transparent bg-gradient-to-r from-[0%] to-[50%] from-lightGreen  to-orangeRed font-mulish font-bold text-base lg:text-2xl uppercase'>Address</h6>
+                                    <p className='font-mulish font-normal text-sm lg:text-lg text-shadowLight'>Zinzira-Keranigonj, Dhaka</p>
                                 </div>
                             </motion.li>
                         </motion.ul>
                     </div>
                     <div  className="contactForm w-full md:w-3/5">
                         <motion.form initial={'initial'} whileInView={'animate'} variants={container} viewport={{ once:true }} action="" method="post" className='max-w-[800px] ml-auto'>
-                            <motion.div variants={children} className="flex justify-between w-full gap-10">
-                            <div className="inp mb-5  w-1/2">
+                            <motion.div variants={children} className="flex justify-between w-full flex-wrap sm:gap-4">
+                            <div className="inp mb-5 w-full sm:w-[48%]">
                                 <label htmlFor="name" className='block bg-clip-text text-transparent bg-gradient-to-r from-[0%] to-[12%]  from-lightGreen  to-orangeRed  font-mulish text-lg md:text-xl font-bold'>Name*</label>
                                 <input type="text" name="name" id="" placeholder='Name...' className='placeholder:font-mulish placeholder:text-base md:placeholder:text-lg placeholder:font-normal placeholder:text-[#323232] font-mulish text-sm md:text-lg font-normal bg-[#21212150] w-full p-4 mt-2 text-lightGreen'/>
                             </div>
-                            <div className="inp mb-5 w-1/2">
+                            <div className="inp mb-5 w-full sm:w-[48%]">
                                 <label htmlFor="name" className='block bg-clip-text text-transparent  bg-gradient-to-r from-[0%] to-[12%]  from-lightGreen  to-orangeRed font-mulish text-lg md:text-xl font-bold'>Email*</label>
                                 <input type="text" name="email" id="" placeholder='Email...' className='placeholder:font-mulish placeholder:text-base md:placeholder:text-lg placeholder:font-normal font-mulish text-sm md:text-lg placeholder:text-[#323232] font-normal bg-[#21212150] w-full p-4 mt-2 text-lightGreen'/>
                             </div>
                             </motion.div>
-                            <motion.div variants={children} className="flex justify-between w-full gap-10">
-                            <div className="inp mb-5 w-1/2">
+                            <motion.div variants={children} className="flex justify-between flex-wrap w-full sm:gap-4">
+                            <div className="inp mb-5  w-full sm:w-[48%]">
                                 <label htmlFor="name" className='block bg-clip-text text-transparent bg-gradient-to-r from-[0%] to-[20%] from-lightGreen  to-orangeRed font-mulish text-lg md:text-xl font-bold'>Phone Number*</label>
                                 <input type="text" name="number" id="" placeholder='Number...' className='placeholder:font-mulish placeholder:text-base md:placeholder:text-lg placeholder:font-normal placeholder:text-[#323232] font-mulish text-sm md:text-lg font-normal bg-[#21212150] w-full p-4 mt-2 text-lightGreen'/>
                             </div>
-                            <div className="inp mb-5 w-1/2">
+                            <div className="inp mb-5  w-full sm:w-[48%]">
                                 <label htmlFor="name" className='block bg-clip-text text-transparent bg-gradient-to-r from-[0%] to-[15%]  from-lightGreen  to-orangeRed  font-mulish text-lg md:text-xl font-bold'>Subject*</label>
                                 <input type="text" name="name" id="" placeholder='Subject...' className='placeholder:font-mulish placeholder:text-base md:placeholder:text-lg placeholder:font-normal font-mulish text-sm md:text-lg placeholder:text-[#323232] font-normal bg-[#21212150] w-full p-4 mt-2 text-lightGreen'/>
                             </div>
