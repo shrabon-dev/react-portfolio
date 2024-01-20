@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import logo from '../../assets/logo.png'
+import logo from '../../assets/a-logo.svg'
 import { TbMenuDeep } from "react-icons/tb";
 import { IoCloseOutline } from "react-icons/io5";
 import { GoDownload } from "react-icons/go";
@@ -68,7 +68,7 @@ export default function Navbar() {
   return (
     <>
         {/* <nav className=''> */}
-        <nav className={`py-4 w-full z-[999999] ${fixedMenu ? 'shadow-xl shadow-black/25 bg-[#242424] fixed duration-700 ease-linear top-0' : 'absolute border-b bg-transparent border-transparent duration-700 ease-linear top-14'}`}>
+        <nav className={`py-4 w-full z-[999999] ${fixedMenu ? 'shadow-xl shadow-black/25 bg-[#242424] fixed duration-700 ease-linear top-0' : 'absolute bg-transparent duration-700 ease-linear top-0 md:top-14'}`}>
             <div className="container mx-auto px-4 md:px-0">
                <div className="flex justify-between items-center">
                     {/* LOGO START */}
@@ -84,15 +84,15 @@ export default function Navbar() {
                     </div>
                </div>
                     {/* MENUS START */}
-                    <div className={`menuBars !fixed  z-0 ease-linear md:block md:visible duration-300 ${isOpen ? 'left-0 ':'-left-1/4 '} bg-[#242424] top-0 w-full md:w-1/5 h-screen  shadow-2xl md:shadow-none shadow-black  py-10`}>
+                    <div className={`menuBars !fixed  z-0 ease-linear md:block md:visible duration-300 ${isOpen ? 'left-0 ':'-left-full '} bg-[#242424] top-0 w-1/2 overflow-auto md:overflow-hidden md:w-1/3 lg:w-1/3 xl:w-1/3 2xl:w-1/5 h-full md:h-screen  shadow-2xl md:shadow-none shadow-black py-0 md:py-10`}>
                            {/* LOGO START */}
-                    <div className="logo pt-10 text-right  pl-20">
+                    <div className="logo pt-5 md:pt-10 text-right pl-6 md:pl-14 lg:pl-20">
                         <picture>
                             <img className='w-10 md:w-20  block' src={logo} alt={logo} />
                            
                         </picture>
                     </div>
-                        <ul className='pt-20'>
+                        <ul className='pt-10 md:pt-20'>
                             <li><a className={`a ${activeMenuItem == 'home' ? 'a !text-lightGreen':'a'}`} href="#home">Home </a></li>
                             <li><a className={`a ${activeMenuItem == 'about' ? 'a !text-lightGreen':'a'}`} href="#about">About</a></li>
                             <li><a className={`a ${activeMenuItem == 'services' ? 'a !text-lightGreen':'a'}`} href="#services">Services</a></li>
@@ -103,23 +103,24 @@ export default function Navbar() {
                         </ul>
                         {/* Contact Me Start*/}
 
-                        <div className="contact_me p-20">
+                        <div className="contact_me p-6 md:p-14 lg:p-20">
                             <h6 className='p-0 text-base font-medium uppercase text-white/75 border-b inline pb-1 border-lightGreen font-mulish'>Contact Me</h6>
                             <p className='p-0 text-sm font-medium  text-white/75 pt-4  font-mulish'>Zinzira, Keranigonj-Dhaka 1210</p>
                             <p className='p-0 text-sm font-medium  text-white/75 pt-1  font-mulish'>Whatsapp: +880 1786119237</p>
                             
-                            <motion.ul variants={ulMotion}  viewport={{ once:true }} className='flex gap-4 pt-10 -ml-4'>
-                        <motion.li variants={liMotion}><a className='w-10 h-10 mr-1 px-4 inline-block text-white text-2xl relative group' href="#"><FaYoutube className='relative z-10'/> <span className='absolute z-0 left-1/2 top-1/2 w-full -translate-x-[27%] -translate-y-[62%] opacity-0 group-hover:opacity-100 duration-300 ease-linear'><img className='block w-[200px]' src={hover} alt={hover} /></span></a></motion.li>
-                        <motion.li variants={liMotion}><a className='w-10 h-10 mr-1 px-4 inline-block text-white text-2xl relative group' href="#"><FaInstagram className='relative z-10'/> <span className='absolute z-0 left-1/2 top-1/2 w-full -translate-x-[27%] -translate-y-[62%] opacity-0 group-hover:opacity-100 duration-300 ease-linear'><img className='block w-[200px]' src={hover} alt={hover} /></span></a></motion.li>
-                        <motion.li variants={liMotion}><a className='w-10 h-10 mr-1 px-4 inline-block text-white text-2xl relative group' href="#"><BsTwitterX className='relative z-10'/> <span className='absolute z-0 left-1/2 top-1/2 w-full -translate-x-[27%] -translate-y-[62%] opacity-0 group-hover:opacity-100 duration-300 ease-linear'><img className='block w-[200px]' src={hover} alt={hover} /></span></a></motion.li>
-                        <motion.li variants={liMotion}><a className='w-10 h-10 mr-1 px-4 inline-block text-white text-2xl relative group' href="#"><FaLinkedin className='relative z-10'/> <span className='absolute z-0 left-1/2 top-1/2 w-full -translate-x-[27%] -translate-y-[62%] opacity-0 group-hover:opacity-100 duration-300 ease-linear'><img className='block w-[200px]' src={hover} alt={hover} /></span></a></motion.li>
+                            <motion.ul variants={ulMotion}  viewport={{ once:true }} className='flex gap-0 md:gap-4 pt-10 -ml-4'>
+                        <motion.li variants={liMotion}><a className='w-6 h-6 md:w-10 md:h-10 mr-1 px-4 inline-block text-white text-base md:text-2xl relative group' href="#"><FaYoutube className='relative z-10'/> <span className='absolute z-0 left-1/2 top-1/2 w-full -translate-x-[27%] -translate-y-[62%] opacity-0 group-hover:opacity-100 duration-300 ease-linear'><img className='block w-[200px]' src={hover} alt={hover} /></span></a></motion.li>
+                        <motion.li variants={liMotion}><a className='w-6 h-6 md:w-10 md:h-10 mr-1 px-4 inline-block text-white text-base md:text-2xl relative group' href="#"><FaInstagram className='relative z-10'/> <span className='absolute z-0 left-1/2 top-1/2 w-full -translate-x-[27%] -translate-y-[62%] opacity-0 group-hover:opacity-100 duration-300 ease-linear'><img className='block w-[200px]' src={hover} alt={hover} /></span></a></motion.li>
+                        <motion.li variants={liMotion}><a className='w-6 h-6 md:w-10 md:h-10 mr-1 px-4 inline-block text-white text-base md:text-2xl relative group' href="#"><BsTwitterX className='relative z-10'/> <span className='absolute z-0 left-1/2 top-1/2 w-full -translate-x-[27%] -translate-y-[62%] opacity-0 group-hover:opacity-100 duration-300 ease-linear'><img className='block w-[200px]' src={hover} alt={hover} /></span></a></motion.li>
+                        <motion.li variants={liMotion}><a className='w-6 h-6 md:w-10 md:h-10 mr-1 px-4 inline-block text-white text-base md:text-2xl relative group' href="#"><FaLinkedin className='relative z-10'/> <span className='absolute z-0 left-1/2 top-1/2 w-full -translate-x-[27%] -translate-y-[62%] opacity-0 group-hover:opacity-100 duration-300 ease-linear'><img className='block w-[200px]' src={hover} alt={hover} /></span></a></motion.li>
                         </motion.ul>
                         </div>
 
 
 
-                        <span onClick={()=>setIsOpen(!isOpen)} className={`bg-dark w-10 h-10 flex justify-center items-center rounded-full shadow-inner animate-bounce duration-300 hover:text-lightGreen cursor-pointer shadow-black text-white md:hidden text-4xl absolute -top-4 -right-14 ${isOpen ? '':''}`}><IoCloseOutline className="inline-block"/></span>
                     </div>
+                    <span onClick={()=>setIsOpen(!isOpen)} className={`bg-dark w-10 h-10 flex justify-center items-center rounded-full shadow-inner animate-bounce duration-300 hover:text-lightGreen cursor-pointer shadow-black text-white md:hidden text-4xl absolute top-40  ${isOpen ? 'right-10':'-right-full'}`}><IoCloseOutline className="inline-block"/></span>
+
             </div>
         </nav>
     </>
