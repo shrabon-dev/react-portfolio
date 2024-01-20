@@ -7,8 +7,8 @@
         overflow-x: hidden;
     }
     .animationCircle{
-        animation: circe 2s infinite linear;
-        -webkit-animation: circe 2s infinite linear;
+        animation: circe 10s infinite linear;
+        -webkit-animation: circe 10s infinite linear;
         rotate: 360deg;
         color: aliceblue;
     }
@@ -128,7 +128,7 @@
         color: #121212;
     }
     .a{
-        @apply px-4 lg:px-0 xl:px-10 text-white/85 font-kodchasan font-normal text-sm lg:text-xl hover:text-lightGreen duration-300 ease-linear
+        @apply px-20  uppercase font-normal border-black/50 py-4 block after:content-[''] after:-translate-y-1/2 after:top-1/2 after:bg-transparent hover:after:bg-black after:absolute after:h-0 hover:after:h-full after:duration-300 after:ease-linear after:w-full after:left-0  after:z-[-10] z-[11]  relative    text-white/85 font-mulish text-sm lg:text-lg hover:text-lightGreen duration-300 ease-linear
     }
     .textStroke{
         background: -webkit-linear-gradient(top, #01C288 20%,transparent 60%);
