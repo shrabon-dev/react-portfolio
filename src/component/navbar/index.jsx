@@ -38,7 +38,7 @@ export default function Navbar() {
   return (
     <>
         {/* <nav className=''> */}
-        <nav className={` bg-dark py-4  shadow-xl shadow-black/25 w-full z-[999999] ${fixedMenu ? 'border-white/50 bg-dark/25 backdrop-blur-sm fixed border-b-[1px] rounded-b-[50px] duration-700 ease-linear' : 'absolute border-b border-shadowLight duration-700 ease-linear'}`}>
+        <nav className={` bg-transparent py-4 top-14  w-full z-[999999] ${fixedMenu ? 'border-white/20 shadow-xl shadow-black/25 bg-dark/25 backdrop-blur-sm fixed border-b-[1px] rounded-b-[50px] duration-700 ease-linear' : 'absolute border-b border-transparent duration-700 ease-linear'}`}>
             <div className="container mx-auto px-4 md:px-0">
                <div className="flex justify-between items-center">
                     {/* LOGO START */}
