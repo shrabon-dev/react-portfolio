@@ -13,7 +13,7 @@ export default function Footer() {
                         </picture>
                     </div>
                     <div className="w-2/3">
-                        <ul className='flex justify-center gap-5 md:gap-20 lg:gap-32 items-center border-b border-black pb-5'>
+                        <ul className='flex flex-col md:flex-row justify-center gap-0 md:gap-20 lg:gap-32 items-center border-b border-black pb-5'>
                             <li><a className='a !px-0 md:text-base ' href="#">About</a></li>
                             <li><a className='a !px-0 md:text-base ' href="#">Services</a></li>
                             <li><a className='a !px-0 md:text-base ' href="#">Portfolio</a></li>

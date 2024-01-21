@@ -9,7 +9,7 @@ import men from '../../assets/men3.webp'
 export default function Banner() {
   return (
     <>
-      <section className='bg-dark pt-20 md:pt-36 ' id='home'>
+      <section className='bg-dark pt-20 md:pt-36 overflow-x-hidden' id='home'>
         <div className="container mx-auto relative">
 
           <h2 className='font-mulish font-[950] text-[72px] sm:text-[120px] md:text-[140px] lg:text-[180px] xl:text-[260px] text-white/90 leading-[.9]'> <TextAnimation2 text='FULL'/> </h2>

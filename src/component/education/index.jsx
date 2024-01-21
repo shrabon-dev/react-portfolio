@@ -74,7 +74,7 @@ export default function Education() {
 
   return (
     <>
-    <section className='bg-dark relative'>
+    <section className='bg-dark relative overflow-x-hidden'>
             {/* shape for animation start  */}
                 <span className='w-40 h-40  rounded-full bg-gradient-to-r from-[#191E1C] to-[#101010] inline-block absolute top-40 left-0 animate-pulse'></span>
                 <span className='w-10 h-10  rounded-full bg-gradient-to-r from-[#191E1C] to-[#0c0c0c] inline-block absolute top-72 right-40 animate-pulse'></span>

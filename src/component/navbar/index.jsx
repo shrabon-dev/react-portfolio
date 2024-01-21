@@ -119,7 +119,7 @@ export default function Navbar() {
 
 
                     </div>
-                    <span onClick={()=>setIsOpen(!isOpen)} className={`bg-dark w-10 h-10 flex justify-center items-center rounded-full shadow-inner animate-bounce duration-300 hover:text-lightGreen cursor-pointer shadow-black text-white md:hidden text-4xl absolute top-40  ${isOpen ? 'right-10':'-right-full'}`}><IoCloseOutline className="inline-block"/></span>
+                    <span onClick={()=>setIsOpen(!isOpen)} className={`bg-dark w-10 h-10 flex justify-center items-center rounded-full shadow-inner animate-bounce duration-300 hover:text-lightGreen cursor-pointer shadow-black text-white md:hidden text-4xl absolute top-40  ${isOpen ? 'right-10':'-left-full'}`}><IoCloseOutline className="inline-block"/></span>
 
             </div>
         </nav>
