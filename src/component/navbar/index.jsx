@@ -68,7 +68,7 @@ export default function Navbar() {
   return (
     <>
         {/* <nav className=''> */}
-        <nav className={`py-4 w-full z-[999999] ${fixedMenu ? 'shadow-xl shadow-black/25 bg-[#121212] fixed duration-700 ease-linear top-0' : 'absolute bg-transparent duration-700 ease-linear top-0 md:top-14'}`}>
+        <nav className={`py-4 w-full overflow-x-hidden md:overflow-x-visible z-[999999] ${fixedMenu ? 'shadow-xl shadow-black/25 bg-[#121212] fixed duration-700 ease-linear top-0' : 'absolute bg-transparent duration-700 ease-linear top-0 md:top-14'}`}>
             <div className="container mx-auto px-4 md:px-0">
                <div className="flex justify-between items-center">
                     {/* LOGO START */}
