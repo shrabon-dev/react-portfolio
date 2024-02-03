@@ -6,6 +6,19 @@ import shape3 from '../../assets/Rectangle 109.png'
 import shape4 from '../../assets/Rectangle 105.png'
 import SkillItem from '../reusable/SkillItem'
 import { motion,cubicBezier} from "framer-motion"
+import html from '../../assets/skill/Html5.png'
+import css from '../../assets/skill/css.png'
+import sass from '../../assets/skill/sass.png'
+import bootstrap from '../../assets/skill/bootstrap.png'
+import jquery from '../../assets/skill/jquery.png'
+import tailwind from '../../assets/skill/tailwind.svg'
+import js from '../../assets/skill/js.svg'
+import react from '../../assets/skill/react.svg'
+import laravel from '../../assets/skill/laravel.svg'
+import php from '../../assets/skill/php.svg'
+import mysql from '../../assets/skill/mysql.svg'
+import firebase from '../../assets/skill/firebase.svg'
+import redux from '../../assets/skill/firebase.svg'
 
 export default function Skill() {
     const container = {
@@ -65,21 +78,19 @@ export default function Skill() {
             <Title heading='Skill' subText='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore' />
 
             <motion.div initial={'initial'} whileInView={'animate'} variants={container} viewport={{ once:true }} className="skills flex justify-around pt-14 md:pt-32 flex-wrap gap-4 md:gap-8">
-                <SkillItem variant={children} name='html'/>
-                <SkillItem variant={children} name='css'/>
-                <SkillItem variant={children} name='Sass'/>
-                <SkillItem variant={children} name='css'/>
-                <SkillItem variant={children} name='Bootstrap'/>
-                <SkillItem variant={children} name='Sass'/>
-                <SkillItem variant={children} name='Bootstrap'/>
-                <SkillItem variant={children} name='html'/>
-                <SkillItem variant={children} name='Sass'/>
-                <SkillItem variant={children} name='Sass'/>
-                <SkillItem variant={children} name='Sass'/>
-                <SkillItem variant={children} name='Sass'/>
-                <SkillItem variant={children} name='Sass'/>
-                <SkillItem variant={children} name='Sass'/>
-                <SkillItem variant={children} name='Sass'/>
+                <SkillItem img={html} variant={children} name='html'/>
+                <SkillItem img={css} variant={children} name='css'/>
+                <SkillItem img={sass} variant={children} name='Sass'/>
+                <SkillItem img={tailwind} variant={children} name='Tailwind'/>
+                <SkillItem img={bootstrap} variant={children} name='Bootstrap'/>
+                <SkillItem img={jquery} variant={children} name='Jquery'/>
+                <SkillItem img={react} variant={children} name='React JS'/>
+                <SkillItem img={redux} variant={children} name='Redux Tolkit'/>
+                <SkillItem img={js} variant={children} name='Javascript'/>
+                <SkillItem img={laravel} variant={children} name='Laravel'/>
+                <SkillItem img={php} variant={children} name='PHP'/>
+                <SkillItem img={mysql} variant={children} name='MySQL'/>
+                <SkillItem img={firebase} variant={children} name='Firebase'/>
             </motion.div>
             
         </div>

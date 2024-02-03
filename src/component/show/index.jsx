@@ -9,8 +9,8 @@ export default function Show() {
         <section className='no-repeat bg-cover h-full ' style={{ backgroundImage:`url(${img})` }}>
             <div className="container mx-auto relative p-6 md:p-0 md:py-10">
                 <h2 className='font-[950] font-mulish mb-2 md:mb-0 text-[44px] sm:text-[92px] md:text-[120px] lg:text-[160px] xl:text-[200px] 2xl:text-[240px] text-white uppercase leading-[1.2]'>
-                <TextAnimation2 text='We'/> 
-                <TextAnimation2 text='provide '/> 
+                <TextAnimation2 text="I"/> 
+                <TextAnimation2 text='provide'/> 
                 <TextAnimation2 text='best work'/> 
                 </h2>
              

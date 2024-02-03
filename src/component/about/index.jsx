@@ -77,7 +77,7 @@ export default function About() {
             {/* shape for animation end */}
             <span className=''></span>
             <div className="container mx-auto overflow-hidden">
-                <motion.h3 initial={{y:'100px',opacity:0}} whileInView={{ y:'0px',opacity:1 }} transition={{ duration:1,ease:cubicBezier(.8,.8,.8,.8) }} viewport={{ once:true }} className='font-kodchasan font-bold text-[50px] sm:text-[70px] md:text-[80px] lg:text-[120px] text-center text-transparent bg-clip-text bg-gradient-to-r from-orangeRed to-lightGreen pb-10'>MUHAMMAD ALI</motion.h3>
+                <motion.h3 initial={{y:'100px',opacity:0}} whileInView={{ y:'0px',opacity:1 }} transition={{ duration:1,ease:cubicBezier(.8,.8,.8,.8) }} viewport={{ once:true }} className='font-kodchasan font-bold text-[50px] sm:text-[70px] md:text-[80px] lg:text-[120px] text-center text-transparent bg-clip-text bg-gradient-to-r from-orangeRed to-lightGreen pb-10'>MUHAMMAD SHRABON</motion.h3>
                 <div className="aboutInfo flex flex-col sm:flex-row justify-between md:items-center">
                 <motion.div initial={{y:'-100px',opacity:0}} whileInView={{ y:'0px',opacity:1 }} transition={{ duration:1,ease:cubicBezier(.8,.8,.8,.8) }} viewport={{ once:true }} className="img sm:w-1/2">
                     <picture>
@@ -85,10 +85,14 @@ export default function About() {
                     </picture>
                 </motion.div>
                 <motion.div initial={'initial'} whileInView={'animate'} variants={container} viewport={{ once:true }} className="info  sm:w-1/2 pt-10 sm:pt-0 pl-4 sm:pl-0">
-                    <motion.h4 variants={children} className='font-bold text-2xl sm:text-2xl lg:text-4xl font-kodchasan text-white/95 uppercase'>Muhammad Sulaiman</motion.h4>
+                    <motion.h4 variants={children} className='font-bold text-2xl sm:text-2xl lg:text-4xl font-kodchasan text-white/95 uppercase'>Muhammad Shrabon</motion.h4>
                     <motion.h6 variants={children} className='font-bold text-lg lg:text-2xl font-kodchasan text-lightGreen py-3'>Full Stack Developer</motion.h6>
-                    <motion.p  variants={children} className='font-normal text-sm lg:text-lg font-kodchasan text-shadowLight w-4/5 pb-5'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution</motion.p>
-                    <motion.p  variants={children} className='font-normal text-sm lg:text-lg font-kodchasan text-shadowLight/90 w-4/5'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution</motion.p>
+                    <motion.p  variants={children} className='font-normal text-sm lg:text-lg font-kodchasan text-shadowLight w-4/5 pb-5'>I'm a skilled Full Stack Developer with expertise in end-to-end web application 
+                    development. Proficient in both front-end and back-end technologies, I seamlessly
+                    merge coding and design for intuitive digital experiences. Fueled by a passion for 
+                    technology, I excel in problem-solving, optimizing performance, and delivering 
+                    high-quality web applications through strategic planning and execution.</motion.p>
+                    <motion.p  variants={children} className='font-normal text-sm lg:text-lg font-kodchasan text-shadowLight/90 w-4/5'> I work collaboratively with other developers, designers, and stakeholders to bring projects to life. I stay up-to-date with the latest web development trends and technologies to ensure exceptional results. Reach out to me for your web development needs!</motion.p>
                     <motion.ul variants={ulMotion}  viewport={{ once:true }} className='flex gap-4 pt-10'>
                         <motion.li variants={liMotion}><a className='w-10 h-10 mr-1 px-4 inline-block text-white text-2xl relative group' href="#"><FaYoutube className='relative z-10'/> <span className='absolute z-0 left-1/2 top-1/2 w-full -translate-x-[27%] -translate-y-[62%] opacity-0 group-hover:opacity-100 duration-300 ease-linear'><img className='block w-[200px]' src={hover} alt={hover} /></span></a></motion.li>
                         <motion.li variants={liMotion}><a className='w-10 h-10 mr-1 px-4 inline-block text-white text-2xl relative group' href="#"><FaInstagram className='relative z-10'/> <span className='absolute z-0 left-1/2 top-1/2 w-full -translate-x-[27%] -translate-y-[62%] opacity-0 group-hover:opacity-100 duration-300 ease-linear'><img className='block w-[200px]' src={hover} alt={hover} /></span></a></motion.li>
