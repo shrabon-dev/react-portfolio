@@ -6,8 +6,10 @@ import { FaLinkedin } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import hover from '../../assets/hover.png'
 import shape1 from '../../assets/Polygon 5.png'
-import { motion,cubicBezier} from "framer-motion"
+import { motion,cubicBezier, useViewportScroll, useTransform} from "framer-motion"
 export default function About() {
+    const { scrollYProgress } = useViewportScroll()
+const scale = useTransform(scrollYProgress, [0, 1], [1,3]);
     const container = {
         initial: {
             opacity: 0,
@@ -79,9 +81,17 @@ export default function About() {
             <div className="container mx-auto overflow-hidden">
                 <motion.h3 initial={{y:'100px',opacity:0}} whileInView={{ y:'0px',opacity:1 }} transition={{ duration:1,ease:cubicBezier(.8,.8,.8,.8) }} viewport={{ once:true }} className='font-kodchasan font-bold text-[50px] sm:text-[70px] md:text-[80px] lg:text-[120px] text-center text-transparent bg-clip-text bg-gradient-to-r from-orangeRed to-lightGreen pb-10'>MUHAMMAD SHRABON</motion.h3>
                 <div className="aboutInfo flex flex-col sm:flex-row justify-between md:items-center">
-                <motion.div initial={{y:'-100px',opacity:0}} whileInView={{ y:'0px',opacity:1 }} transition={{ duration:1,ease:cubicBezier(.8,.8,.8,.8) }} viewport={{ once:true }} className="img sm:w-1/2">
+                <motion.div   className="img sm:w-1/2 ">
                     <picture>
-                        <img className='block w-1/2 rounded-md mx-auto' src={img} alt="" />
+                    <motion.img
+                    initial={{ height: '200px' }}
+                    whileInView={{ height: '100%' }}
+                    transition={{ duration: 2, ease: 'easeInOut' }}
+                    viewport={{ once:true }}
+                    className='block w-1/2 rounded-md mx-auto object-cover'
+                    src={img}
+                    alt=""
+                    />
                     </picture>
                 </motion.div>
                 <motion.div initial={'initial'} whileInView={'animate'} variants={container} viewport={{ once:true }} className="info  sm:w-1/2 pt-10 sm:pt-0 pl-4 sm:pl-0">
