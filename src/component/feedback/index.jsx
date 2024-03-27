@@ -90,7 +90,7 @@ export default function Feedback() {
 
   return (
     <>
-        <section className='bg-dark overflow-x-hidden' id='feedback'>
+        <section className='bg-dark overflow-hidden' id='feedback'>
             <div className="container mx-auto py-20 pb-32 relative">
                 <Title heading='Feedback' subText='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore' />
 
