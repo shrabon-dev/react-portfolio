@@ -42,7 +42,7 @@ export default function ContactForm() {
     }
   return (
     <>
-        <section className='bg-dark overflow-x-hidden'>
+        <section className='bg-dark overflow-hidden'>
             <div className="container mx-auto py-4 sm:py-20">
                 {/* CONTACT FORM & INFO START */}
                 <div className="flex flex-col md:flex-row justify-between items-center gap-10 p-4 md:p-0">
